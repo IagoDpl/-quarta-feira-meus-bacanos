@@ -32,7 +32,7 @@ function App() {
 
   const apiUrl = import.meta.env.DEV
     ? "http://localhost:5000/QuartaFeira"
-    : "https://e-quarta-feira-meus-bacanos.onrender.com/";
+    : "https://e-quarta-feira-meus-bacanos.onrender.com/QuartaFeira";
 
   useEffect(() => {
     axios
