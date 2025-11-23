@@ -28,3 +28,9 @@ appsettings.Development.json
 *.njsproj
 *.sln
 *.sw?
+.vs/
+bin/
+obj/
+node_modules/
+dist/
+*.user
