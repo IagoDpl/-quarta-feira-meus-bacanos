@@ -7,7 +7,7 @@ function App() {
   const [mensagem, setMensagem] = useState("Verificando o calendário...");
 
   useEffect(() => {
-    axios.get('http://localhost:5000/QuartaFeira')
+    axios.get('https://e-quarta-feira-meus-bacanos.onrender.com/')
       .then(response => {
         // O back-end nos diz se é verdade (true) ou mentira (false)
         setEhQuarta(response.data.ehDiaDoSapinho);
