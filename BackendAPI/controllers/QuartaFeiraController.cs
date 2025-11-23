@@ -11,7 +11,6 @@ namespace BackendAPI.Controllers
         {
             // 1. Pega a data atual do servidor
             var dataAtual = DateTime.Now;
-            
 
             // 2. Verifica se o dia da semana é Quarta-feira (Wednesday)
             bool eQuartaFeira = dataAtual.DayOfWeek == DayOfWeek.Wednesday;

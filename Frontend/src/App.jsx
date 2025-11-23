@@ -41,10 +41,10 @@ function App() {
         
         // O back-end nos diz se é verdade (true) ou mentira (false)
         const resultado =
-          response.data.ehDiaDoSapinho || response.data.EhDiaDoSapinho;
+          response.data.ehDiaDoSapinho
 
         setEhQuarta(resultado);
-        setMensagem(response.data.mensagem || response.data.Mensagem);
+        setMensagem(response.data.mensagem)
         
       })
       .catch((error) => {

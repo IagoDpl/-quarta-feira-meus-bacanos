@@ -5,6 +5,6 @@
     "\\BackendAPI\\controllers",
     "\\BackendAPI\\Properties"
   ],
-  "SelectedNode": "\\BackendAPI\\Program.cs",
+  "SelectedNode": "\\BackendAPI\\controllers\\QuartaFeiraController.cs",
   "PreviewInSolutionExplorer": false
 }
