@@ -3,7 +3,9 @@
     "",
     "\\BackendAPI",
     "\\BackendAPI\\controllers",
-    "\\BackendAPI\\Properties"
+    "\\BackendAPI\\Properties",
+    "\\Frontend",
+    "\\Frontend\\src"
   ],
   "SelectedNode": "\\BackendAPI\\controllers\\QuartaFeiraController.cs",
   "PreviewInSolutionExplorer": false

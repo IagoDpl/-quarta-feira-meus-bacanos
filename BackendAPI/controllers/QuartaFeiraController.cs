@@ -11,6 +11,8 @@ namespace BackendAPI.Controllers
         {
             // 1. Pega a data atual do servidor
             var dataAtual = DateTime.Now;
+            TimeZoneInfo fusoBrasilia = TimeZoneInfo.FindSystemTimeZoneById("E.South America Standard Time");
+            DateTime horaBrasilia = TimeZoneInfo.ConvertTime(horaAtual, fusoBrasilia);
 
             // 2. Verifica se o dia da semana é Quarta-feira (Wednesday)
             bool eQuartaFeira = dataAtual.DayOfWeek == DayOfWeek.Wednesday;
