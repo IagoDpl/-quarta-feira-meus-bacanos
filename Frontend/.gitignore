@@ -18,6 +18,17 @@ obj/
 .vs/
 *.user
 appsettings.Development.json
+vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+bin/
+obj/
+Debug/
+Release/
+.DS_Store
+Thumbs.db
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
