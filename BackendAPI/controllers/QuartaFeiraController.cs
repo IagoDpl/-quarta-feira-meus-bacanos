@@ -9,19 +9,19 @@ namespace BackendAPI.Controllers
         [HttpGet]
         public IActionResult VerificarDia()
         {
-            // 1. Pega a data atual do servidor
-            var dataAtual = DateTime.Now;
-            TimeZoneInfo fusoBrasilia = TimeZoneInfo.FindSystemTimeZoneById("E.South America Standard Time");
-            DateTime horaBrasilia = TimeZoneInfo.ConvertTime(dataAtual, fusoBrasilia);
+            // Pega a hora UTC (universal) e subtrai 3 horas (Brasília)
+            // Isso funciona em qualquer sistema operacional (Windows ou Linux)
+            var dataBrasilia = DateTime.UtcNow.AddHours(-3);
 
-            // 2. Verifica se o dia da semana é Quarta-feira (Wednesday)
-            bool eQuartaFeira = dataAtual.DayOfWeek == DayOfWeek.Wednesday;
-            // 3. Retorna um objeto JSON para o React
+            // Verifica se é quarta-feira
+            bool eQuartaFeira = dataBrasilia.DayOfWeek == DayOfWeek.Wednesday;
+
             return Ok(new
             {
-                diaDaSemana = dataAtual.DayOfWeek.ToString(),
+                diaDaSemana = dataBrasilia.DayOfWeek.ToString(),
                 ehDiaDoSapinho = eQuartaFeira,
-                mensagem = eQuartaFeira ? "Quartou!" : "Ainda não, meu chapa."
+                mensagem = eQuartaFeira ? "Quartou!" : "Ainda não, meu chapa.",
+                horaNoServidor = dataBrasilia.ToString("HH:mm:ss")
             });
         }
     }
