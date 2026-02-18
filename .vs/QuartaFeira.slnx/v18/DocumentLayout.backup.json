@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "BackendAPI\\Dockerfile",
               "ToolTip": "C:\\Users\\PICHAU\\Desktop\\QuartaFeira\\BackendAPI\\Dockerfile",
               "RelativeToolTip": "BackendAPI\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-02-18T02:00:56.965Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "Frontend\\.gitignore",
               "ViewState": "AgIAAAAAAAAAAAAAAAAmwBkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-18T01:32:53.562Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-18T01:32:53.562Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "BackendAPI\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T01:17:50.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-18T01:17:50.648Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "BackendAPI\\controllers\\QuartaFeiraController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T01:16:17.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-18T01:16:17.708Z"
             }
           ]
         }

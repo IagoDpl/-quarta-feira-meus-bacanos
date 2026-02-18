@@ -1,25 +1,24 @@
-# 1. Usar a imagem oficial do SDK do .NET para construir o projeto
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Copia os arquivos do projeto e restaura as dependências
-COPY *.csproj ./
+# 1. Copia o arquivo do projeto e restaura as dependências
+COPY ["BackendAPI.csproj", "./"]
 RUN dotnet restore
 
-# Copia todo o resto e cria a versão final (Release)
-COPY ["BackendAPI.csproj", "./"]
+# 2. AGORA COPIA TODO O RESTO (Program.cs, Controllers, etc.)
+# ISSO TEM QUE VIR ANTES DO PUBLISH!
+COPY . . 
+
+# 3. Agora sim, compila tudo junto
 RUN dotnet publish -c Release -o out
 
-COPY . . 
-RUN dotnet build "BackendAPI.csproj" -c Release -o /app/build
-
-# 2. Usar a imagem leve apenas para RODAR o projeto (sem ferramentas de build)
+# 4. Finaliza a imagem para rodar
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
 COPY --from=build /app/out .
 
-# Configura a porta que o Render exige (8080)
+# Porta padrão do Render/Docker
 ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
 
-# Comando para iniciar a API
 ENTRYPOINT ["dotnet", "BackendAPI.dll"]
